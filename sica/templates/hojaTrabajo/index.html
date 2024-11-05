@@ -6,28 +6,31 @@
 
 <div class="container">
 <div class="jumbotron" style="background-color: #08728737!important;">
-    <center><h1 class="display-6">Hoja de Trabajo</h1></center>
+    <center><h1 class="display-6">Estados financieros</h1></center>
     <hr class="my-2">
     <br>
+    <!--
+    -->
 
-    <div class="row">
-        <div class="col-sm">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-4">
             <div class="card text-dark bg-white text-center" style="max-width: 20rem;">
                 <div class="card-header text-white bg-dark" style="background-color: #087287!important;">
-                    <h5 class="card-title">1. Balance de comprobacion</h5>
+                    <h5 class="card-title">1. Balance de comprobación</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">
-                        Estado financiero que refleja los saldos de las cuentas, y los respectivos totales tanto en el debo como en el haber.
+                        Saldos deudores y acreedores totales de todas las cuentas.
                     </p>
                     <br>
                     <p class="lead">
-                        <a class="btn btn-success btn-lg" href="{% url 'balanceComprobacion' %}" role="button">Empezar</a>
+                        <a class="btn btn-success btn-lg" href="{% url 'balanceComprobacion' %}" role="button">Acceder</a>
                     </p>
                 </div>
             </div>
         </div>
 
+        <!--
         <div class="col-sm">
             <div class="card text-dark bg-white  text-center" style="max-width: 20rem;">
                 <div class="card-header text-white bg-dark" style="background-color: #087287!important;">
@@ -39,12 +42,14 @@
                     </p>
                     <br>
                     <p class="lead">
-                        <a class="btn btn-success btn-lg" href="{% url 'ajustes' %}" role="button">Empezar</a>
+                        <a class="btn btn-success btn-lg" href="{% url 'ajustes' %}" role="button">Acceder</a>
                     </p>
                 </div>
             </div>
         </div>
+        -->
 
+        <!--
         <div class="col-sm">
             <div class="card text-dark bg-white text-center" style="max-width: 20rem;">
                 <div class="card-header text-white bg-dark" style="background-color: #087287!important;">
@@ -56,63 +61,63 @@
                     </p>
                     <br>
                     <p class="lead">
-                        <a class="btn btn-success btn-lg" href="{% url 'balanceComprobacionAjustado' %}" role="button">Empezar</a>
+                        <a class="btn btn-success btn-lg" href="{% url 'balanceComprobacionAjustado' %}" role="button">Acceder</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        -->
+
+        <div class="col-md-5">
+            <div class="card text-dark bg-white  text-center" style="max-width: 20rem;">
+                <div class="card-header text-white bg-dark" style="background-color: #087287!important;">
+                    <h5 class="card-title">2. Estado de resultado</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Ingresos, costos y gastos durante el periodo.
+                    </p>
+                    <br>
+                    <p class="lead">
+                        <a class="btn btn-success btn-lg" href="{% url 'estadoResultado' %}" role="button">Acceder</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="card text-dark bg-white  text-center" style="max-width: 20rem;">
-                <div class="card-header text-white bg-dark" style="background-color: #087287!important;">
-                    <h5 class="card-title">4. Estado de resultado</h5>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">
-                        Estado financiero que muestra de forma ordenada y detallada, los saldos de las cuentas de costo y gasto que participan en el calculo del resultado
-                        del ejercicio durante un periodo
-                    </p>
-                    <br>
-                    <p class="lead">
-                        <a class="btn btn-success btn-lg" href="{% url 'estadoResultado' %}" role="button">Empezar</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div class="row align-items-center justify-content-center">
+        
 
-        <div class="col-sm">
+        <div class="col-md-4">
             <div class="card text-dark bg-white text-center" style="max-width: 20rem;">
                 <div class="card-header text-white bg-dark" style="background-color: #087287!important;">
-                    <h5 class="card-title">5. Estado de capital</h5>
+                    <h5 class="card-title">3. Estado de capital</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">
-                        Estado financiero que muestra las alteraciones en el
-                        patrimonio del taller mecanico TURBOMEC.
+                        Resumen de las transacciones en las cuentas de capital.
                     </p>
                     <br>
                     <p class="lead">
-                        <a class="btn btn-success btn-lg" href="{% url 'estadoCapital' %}" role="button">Empezar</a>
+                        <a class="btn btn-success btn-lg" href="{% url 'estadoCapital' %}" role="button">Acceder</a>
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm">
+        <div class="col-md-5">
             <div class="card text-dark bg-white  text-center" style="max-width: 20rem;">
                 <div class="card-header text-white bg-dark" style="background-color: #087287!important;">
-                    <h5 class="card-title">6. Balance general</h5>
+                    <h5 class="card-title">4. Balance general</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">
-                        Informe financiero contable que refleja la situación económica y financiera
-                        de la empresa en un momento determinado
+                        Informe de la situación económica y financiera a la fecha.
                     </p>
                     <br>
                     <p class="lead">
-                        <a class="btn btn-success btn-lg" href="{% url 'balanceGeneral' %}" role="button">Empezar</a>
+                        <a class="btn btn-success btn-lg" href="{% url 'balanceGeneral' %}" role="button">Acceder</a>
                     </p>
                 </div>
             </div>
