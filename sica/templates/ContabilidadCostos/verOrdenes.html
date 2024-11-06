@@ -43,9 +43,9 @@
                     <tr>
                         <th>N° de Orden </th>
                         <th>Fecha</th>
-                        <th> Detalles </th>
-                        <th>N° Pedido</th>
-                        <th>Observaciones</th>
+                        <th> Tipo de servicio </th>
+                        <!--<th>N° Pedido</th>-->
+                        <th>Detalles</th>
                         <th></th>
                         <th></th>
                         <th></th>
@@ -63,7 +63,7 @@
                             <td> {{OrdendeProduccion.id_OrdendeProduccion}}</td>
                             <td> {{OrdendeProduccion.fecha_Actual}}</td>
                             <td> {{OrdendeProduccion.producto_Orden}}</td>
-                            <td> {{OrdendeProduccion.numero_Pedido}}</td>
+                            <!--<td> {{OrdendeProduccion.numero_Pedido}}</td>-->
                             <td> {{OrdendeProduccion.detalles_Pedido}}</td>
                             <td>
                                 <a class="btn btn-info btn-sm" href="{% url 'verManodeObra' OrdendeProduccion.id_OrdendeProduccion  %}" role="button">Mano de Obra</a>
@@ -71,15 +71,17 @@
                             <td>
                                 <a class="btn btn-info btn-sm" href="{% url 'verProrrateo' OrdendeProduccion.id_OrdendeProduccion  %}" role="button">Ver Prorrateo</a>
                             </td>
-                            <td>
+                            <!--<td>
                                 <a class="btn btn-info btn-sm" href="{% url 'verCostosIndirectos' OrdendeProduccion.id_OrdendeProduccion %}" role="button">Costos Indirectos</a>
                             </td>
+                            -->
                             <td>
-                                <a class="btn btn-info btn-sm" href="{% url 'verFactura' OrdendeProduccion.id_OrdendeProduccion %}" role="button">Ver Factura</a>
+                                <a class="btn btn-info btn-sm" href="{% url 'verFactura' OrdendeProduccion.id_OrdendeProduccion %}" role="button">VER TOTAL</a>
                             </td>
-                            <td>
+                            <!--<td>
                                 <a href="#" onclick="eliminarOrden({{ OrdendeProduccion.id_OrdendeProduccion}})" class="btn btn-danger" role="button">Borrar</a>
                             </td>
+                            -->
                             
                         </tr>
                     {% endfor %}
