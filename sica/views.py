@@ -554,7 +554,7 @@ def estadoResultado(request):
         subCuenta.save()
 
     subCuentasResultado = SubCuenta.objects.filter((Q(debe__gt=0.00) | Q(haber__gt=0.00)) &
-                                                   ((Q(id_subCuenta__contains='4101') | Q(id_subCuenta__contains='4102') | Q(id_subCuenta__contains='4201')) |
+                                                   ((Q(id_subCuenta__contains='4101') | Q(id_subCuenta__contains='4102') | Q(id_subCuenta__contains='4201')) |#aqui no va la 4202, va en capital
                                                    (Q(id_subCuenta__contains='5101') | Q(id_subCuenta__contains='5201') | Q(id_subCuenta__contains='5202'))))
 
     suma_debe = 0
@@ -910,10 +910,10 @@ def verFactura(request, id_OrdendeProduccion):
     ordenes = OrdendeProduccion.objects.get(id_OrdendeProduccion=id_OrdendeProduccion)
     obras = ManodeObra.objects.filter(id_OrdendeProduccion=id_OrdendeProduccion)
     costos = CostosIndirectos.objects.filter(id_OrdendeProduccion=id_OrdendeProduccion)
-    multi = ordenes.precio_MateriaPrima
+    #multi = ordenes.precio_MateriaPrima
   
     for obrasfor in obras:
-        suma = Decimal(obrasfor.costo) + Decimal(multi)
+        suma = Decimal(obrasfor.costo) #+ Decimal(multi)
 
 
 

@@ -146,13 +146,13 @@ class Producto(models.Model):
 
 class OrdendeProduccion(models.Model):
     id_OrdendeProduccion = models.AutoField(primary_key=True, null=False, blank=False)
-    nombre_cliente = models.CharField("Nombre",max_length=50,null=False, blank=False)
-    apellido_cliente = models.CharField("Apellido", max_length=50,null=False, blank=False)
-    fecha_Actual = models.DateField("Fecha de Compra", null=False, blank=False,help_text="Consejo: <em>Presione en el calendario</em>.",)
+    #nombre_cliente = models.CharField("Nombre",max_length=50,null=False, blank=False)
+    #apellido_cliente = models.CharField("Apellido", max_length=50,null=False, blank=False)
+    fecha_Actual = models.DateField("Fecha de registro", null=False, blank=False,help_text="Consejo: <em>Presione en el calendario</em>.",)
     producto_Orden = models.ForeignKey(Producto, verbose_name="Lista de Servicios", on_delete=models.PROTECT, null=False, blank=False)
-    precio_MateriaPrima = models.FloatField("Precio de materia prima", null=False, blank=False)
-    numero_Pedido = models.IntegerField("N° de Pedido ", null=False, blank=False)
-    detalles_Pedido = models.CharField("Observaciones",max_length=50,null=False, blank=False)
+    #precio_MateriaPrima = models.FloatField("Precio de materia prima", null=False, blank=False)
+    #numero_Pedido = models.IntegerField("N° de Pedido ", null=False, blank=False)
+    detalles_Pedido = models.CharField("Detalles",max_length=50,null=False, blank=False)
 
 
     class Meta:

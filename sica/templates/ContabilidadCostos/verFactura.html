@@ -11,12 +11,10 @@
     <div class="card">
 
         <div class="card-body">
-            <h4 class="card-title">Factura</h4>
+            <h4 class="card-title">Resumen de costos</h4>
             <div class="col-sm">
                 <p>Fecha: {{ordenes.fecha_Actual}}</p>
                 <p>N° de Orden: {{ordenes.id_OrdendeProduccion}}</p>
-                <p>Nombre Cliente: {{ordenes.nombre_cliente}}</p>
-                <p>Apellido Cliente: {{ordenes.apellido_cliente}}</p>
 
                 <table class="table table-sm table-hover ">
                     <thead class="thead-light">
@@ -24,8 +22,6 @@
 
 
                         <th> Detalles</th>
-                        <th>N° Pedido</th>
-                        <th>Materia Prima</th>
                         <th>Observaciones</th>
 
                     </tr>
@@ -38,8 +34,6 @@
 
 
                         <td> {{ordenes.producto_Orden}}</td>
-                        <td> {{ordenes.numero_Pedido}}</td>
-                        <td> ${{ordenes.precio_MateriaPrima}}</td>
                         <td> {{ordenes.detalles_Pedido}}</td>
                     </tr>
 
